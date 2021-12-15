@@ -20,7 +20,7 @@ void __fastcall__ set_vram_addr(unsigned int addr);
 // Argument : A value to put to vram
 // Return   : None
 // ------------------------------------------------------------------
-void __fastcall__ put_to_vram(unsigned int value);
+void __fastcall__ put_to_vram(unsigned char value);
 
 
 // ------------------------------------------------------------------
@@ -28,7 +28,7 @@ void __fastcall__ put_to_vram(unsigned int value);
 // Argument : None
 // Return   : Value
 // ------------------------------------------------------------------
-unsigned char __fastcall__ get_from_vram(void);
+void __fastcall__ get_from_vram(unsigned char *ptr);
 
 
 // ------------------------------------------------------------------
@@ -36,7 +36,7 @@ unsigned char __fastcall__ get_from_vram(void);
 // Argument : Number of data - 1 and pointer of data
 // Return   : None
 // ------------------------------------------------------------------
-void __fastcall__ copy_to_vram(unsigned char num, void *ptr);
+void __fastcall__ copy_to_vram(unsigned char num, unsigned char *ptr);
 
 
 // ------------------------------------------------------------------

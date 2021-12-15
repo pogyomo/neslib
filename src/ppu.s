@@ -1,6 +1,6 @@
 ; vim: ft=ca65
 ; -------------------------------------------------------------------
-; ppu.s : functions that relate to ppu
+; ppu.s : functions that related to ppu
 ; -------------------------------------------------------------------
 
 
@@ -8,6 +8,7 @@
 ; Import and export
     .export _set_ppu_ctrl, _clear_ppu_ctrl
     .export _set_ppu_mask, _clear_ppu_mask
+    .export _wait_vblank, _wait_zero_sprite
 
     .include "neslib.inc"
 
@@ -86,6 +87,8 @@ ppu_bss: .tag ppu_bss
 
     ; End of function
     rts
+
+.endproc
 
 
 ; -------------------------------------------------------------------
